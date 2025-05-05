@@ -4,6 +4,9 @@ const nextConfig = {
   images: {
     domains: ["images.unsplash.com"],
   },
+  output: 'export', // Static HTML export
+  basePath: process.env.NODE_ENV === 'production' ? '/your-repo-name' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/your-repo-name/' : '',
 };
 
 if (process.env.NEXT_PUBLIC_TEMPO) {
